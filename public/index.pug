@@ -1,0 +1,16 @@
+- let max = 90
+- let n = max;
+- let m = max;
+
+doctype(html)
+html
+  head
+    title Pug Experiment
+    style
+      include styles/style.css
+  body(style=`--max: ${max}`)
+    header
+      h1 Swirl with Pug and CSS
+    .wrapper
+      while n--
+        .segment(style=`--n: ${n}`, id=`block-n-${n}`)

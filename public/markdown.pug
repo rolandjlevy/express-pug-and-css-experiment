@@ -1,0 +1,19 @@
+//- Set the doctype to HTML.
+doctype(html)
+html
+    head
+        title My Fancy Markdown Page
+    body
+        //- We use the markdown-it filter to render markdown.
+        :markdown-it(linkify)
+            # Markdown
+            Look at my fancy markdown page! I can do *italics* and **bold**
+            and `code` and everything!
+            ***
+            Lorem ipsum, dolor set amet.
+            Look, I can do links! https://repl.it
+            ```
+            We also can do code blocks!
+            ```
+        //- You can also include markdown files.
+        include:markdown-it markdown.md

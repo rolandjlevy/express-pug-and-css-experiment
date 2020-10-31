@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(110, 101, 131);
+  margin: 30px;
+}
+
+h1 {
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 50px;
+  margin: 50px;
+}
+
+.segment {
+  position: absolute;
+  width: calc(var(--n) * 0.1vw);
+  height: calc(var(--n) * 1vw);
+  opacity: 0.75;
+  border-radius: calc(var(--n) * 1px);
+  background: linear-gradient(#4c0668 0%,#ff4793 50%, #fff 100%);
+  --pos-x: calc(var(--n) * 0.2vw);
+  transform: rotate(calc((720deg / var(--max)) * var(--n))) translate(var(--pos-x), 0px);
+  transform-origin: 50% 50%;
+  transition: all 0.5s ease;
+}
