@@ -1,6 +1,6 @@
-- let max = 120
-- let n = max;
-- let m = max;
+
+- let n = max
+- let m = max
 
 doctype(html)
 html
@@ -14,7 +14,9 @@ html
 
   body(style=`--max: ${max}`)
     header
-      h1 Swirl with Pug and CSS
+      h1 Swirl with Pug and CSS 
+      a(href='/') < Back
+      br
       input(
         type='range'
         min='1'

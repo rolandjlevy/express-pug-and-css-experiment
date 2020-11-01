@@ -25,15 +25,15 @@ h1 {
 }
 
 .segment {
-  position: absolute;
   width: calc((var(--n) + var(--unit) / 15) * 0.1vw);
   height: calc((var(--n) + var(--unit) / 15) * 1vw);
   border-radius: calc((var(--n) + var(--unit)) * 1px);
-  background: linear-gradient(#4c0668 0%,#ff4793 30%,  #fff 100%);
-  --pos-x: calc((var(--n) + var(--unit)) * 0.2vw);
+  --pos-x: calc((var(--n) + var(--unit)) * 0.15vw);
   transform: rotate(calc((720deg / var(--max)) * (var(--n) + var(--unit)))) translate(var(--pos-x), 0px);
   transform-origin: 50% 50%;
+  position: absolute;
   opacity: 0.75;
+  background: linear-gradient(#4c0668 0%,#ff4793 30%,  #fff 100%);
   transition: all 0.15s ease;
 }
 
