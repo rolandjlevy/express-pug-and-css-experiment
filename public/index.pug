@@ -1,22 +1,24 @@
 
-- let n = max
-- let m = max
+- let n = maxUnits
+- let m = maxUnits
 
 doctype(html)
 html
   head
-    title Pug Experiment
+    title Swirly thing with Pug + CSS
     link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap')
     style
       include styles/style.css
     script
       include src/script.js
 
-  body(style=`--max: ${max}`)
+  body(style=`--max-units: ${maxUnits}`)
     header
-      h1 Swirly thing with Pug + CSS 
-      a(href='/') < Back
-      br
+      h1 Swirly thing with Pug + CSS
+      p
+        select(class='quantity')
+          each quantity in quantities
+            option(value=quantity) Draw #{quantity}
       input(
         type='range'
         min='1'

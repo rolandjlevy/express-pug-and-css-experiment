@@ -8,7 +8,8 @@ body {
 }
 
 :root {
-  --unit: 1;
+  --units: 1;
+  --degrees: 360;
 }
 
 h1 {
@@ -25,11 +26,11 @@ h1 {
 }
 
 .segment {
-  width: calc((var(--n) + var(--unit) / 15) * 0.1vw);
-  height: calc((var(--n) + var(--unit) / 15) * 1vw);
-  border-radius: calc((var(--n) + var(--unit)) * 1px);
-  --pos-x: calc((var(--n) + var(--unit)) * 0.15vw);
-  transform: rotate(calc((720deg / var(--max)) * (var(--n) + var(--unit)))) translate(var(--pos-x), 0px);
+  width: calc((var(--n) + var(--units) / 15) * 0.1vw);
+  height: calc((var(--n) + var(--units) / 15) * 1vw);
+  border-radius: calc((var(--n) + var(--units)) * 1px);
+  --pos-x: calc((var(--n) + var(--units)) * 0.15vw);
+  transform: rotate(calc((360 / var(--max-units) * 1deg) * (var(--n) + var(--units)))) translate(var(--pos-x), 0px);
   transform-origin: 50% 50%;
   position: absolute;
   opacity: 0.75;
@@ -43,7 +44,7 @@ h1 {
   width: 150px;
   height: 10px;
   border-radius: 5px;
-  background: #dfdce7;
+  background: #f1f0f5;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
