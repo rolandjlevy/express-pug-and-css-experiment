@@ -4,6 +4,7 @@ doctype(html)
 html(style=`--quantity:${quantity}; --size:${size}; --degrees:${degrees}`)
   head
     title Swirly thing with Pug + CSS
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
     style
       include styles/slider.css    
