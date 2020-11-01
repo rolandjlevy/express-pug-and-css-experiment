@@ -7,11 +7,9 @@ app.use(express.static('public'));
 
 app.get('/',  (req, res) => {
   res.send(`
-    <a href='/draw?max=10'>Draw 10</a><br>
-    <a href='/draw?max=30'>Draw 30</a><br>
-    <a href='/draw?max=60'>Draw 60</a><br>
-    <a href='/draw?max=90'>Draw 90</a><br>
-    <a href='/draw?max=120'>Draw 120</a>
+    <a href='/draw?max=40'>Draw 40</a><br>
+    <a href='/draw?max=80'>Draw 80</a><br>
+    <a href='/draw?max=120'>Draw 120</a><br>
   `); 
 });
 

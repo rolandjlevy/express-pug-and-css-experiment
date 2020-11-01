@@ -35,6 +35,7 @@ h1 {
   opacity: 0.75;
   background: linear-gradient(#4c0668 0%,#ff4793 30%,  #fff 100%);
   transition: all 0.15s ease;
+  box-shadow: 0 0 15px 0 #4c066833;
 }
 
 .slider {
