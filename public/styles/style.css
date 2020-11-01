@@ -1,6 +1,14 @@
+* {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
 body {
-  background-color: rgb(110, 101, 131);
+  background-color: #6e6583;
   margin: 30px;
+}
+
+:root {
+  --unit: 1;
 }
 
 h1 {
@@ -18,13 +26,49 @@ h1 {
 
 .segment {
   position: absolute;
-  width: calc(var(--n) * 0.1vw);
-  height: calc(var(--n) * 1vw);
-  border-radius: calc(var(--n) * 1px);
+  width: calc((var(--n) + var(--unit) / 15) * 0.1vw);
+  height: calc((var(--n) + var(--unit) / 15) * 1vw);
+  border-radius: calc((var(--n) + var(--unit)) * 1px);
   background: linear-gradient(#4c0668 0%,#ff4793 30%,  #fff 100%);
-  --pos-x: calc(var(--n) * 0.2vw);
-  transform: rotate(calc((720deg / var(--max)) * var(--n))) translate(var(--pos-x), 0px);
+  --pos-x: calc((var(--n) + var(--unit)) * 0.2vw);
+  transform: rotate(calc((720deg / var(--max)) * (var(--n) + var(--unit)))) translate(var(--pos-x), 0px);
   transform-origin: 50% 50%;
   opacity: 0.75;
-  transition: all 0.5s ease;
+  transition: all 0.15s ease;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 10px;
+  border-radius: 5px;
+  background: #dfdce7;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #b6afc7;
+  border: 3px solid #6e6583;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #b6afc7;
+  border: 3px solid #6e6583;
+  cursor: pointer;
 }

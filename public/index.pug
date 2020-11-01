@@ -1,4 +1,4 @@
-- let max = 90
+- let max = 120
 - let n = max;
 - let m = max;
 
@@ -6,11 +6,22 @@ doctype(html)
 html
   head
     title Pug Experiment
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap')
     style
       include styles/style.css
+    script
+      include src/script.js
+
   body(style=`--max: ${max}`)
     header
       h1 Swirl with Pug and CSS
+      input(
+        type='range'
+        min='1'
+        max='100'
+        value='50'
+        class='slider'
+      )
     .wrapper
       while n--
-        .segment(style=`--n: ${n}`, id=`block-n-${n}`)
+        .segment(style=`--n:${n}`, id=`block-n-${n}`)
