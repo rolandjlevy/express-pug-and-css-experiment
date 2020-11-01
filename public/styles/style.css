@@ -22,11 +22,10 @@ input, button, select {
   align-items: center;
   flex-direction: column;
   top: 50px;
-  margin: 50px;
 }
 
 .segment {
-  width: calc((var(--s) + var(--size) * 0.5) * 0.05vw);
+  width: calc((var(--s) + var(--size) * 0.5) * 0.1vw);
   height: calc((var(--s) * 5 + var(--size) / 2) * 0.25vw);
   border-radius: calc((var(--s) + var(--size)) * 1px);
   --pos-x: calc((var(--s)) * 0.25vw);
@@ -34,6 +33,6 @@ input, button, select {
   transform-origin: 50% 50%;
   position: absolute;
   opacity: 0.7;
-  background: linear-gradient(#4c0668 0%,#ff4793 30%,  #fff 100%);
+  background: linear-gradient(#432250 0%,#ff4793 30%,  #fff 100%);
   box-shadow: 0 0 15px 0 #4c066833;
 }
