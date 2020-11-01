@@ -1,31 +1,41 @@
-
-- let n = maxUnits
-- let m = maxUnits
+- let s = quantity
 
 doctype(html)
-html
+html(style=`--quantity:${quantity}; --size:${size}; --degrees:${degrees}`)
   head
     title Swirly thing with Pug + CSS
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+    style
+      include styles/slider.css    
     style
       include styles/style.css
     script
       include src/script.js
 
-  body(style=`--max-units: ${maxUnits}`)
+  body
     header
       h1 Swirly thing with Pug + CSS
       p
+        span Quantity 
         select(class='quantity')
-          each quantity in quantities
-            option(value=quantity) Draw #{quantity}
-      input(
-        type='range'
-        min='1'
-        max='100'
-        value='50'
-        class='slider'
+          each q in quantities
+            option(value=q selected=(quantity==q)) #{q} 
+      p
+        input(
+          type='range'
+          min='1'
+          max='100'
+          value=size
+          class='size slider'
+      )
+      p
+        input(
+          type='range'
+          min='0'
+          max='720'
+          value=degrees
+          class='degrees slider'
       )
     .wrapper
-      while n--
-        .segment(style=`--n:${n}`, id=`block-n-${n}`)
+      while s--
+        .segment(style=`--s:${s}`)
