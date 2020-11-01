@@ -26,15 +26,14 @@ input, button, select {
 }
 
 .segment {
-  width: calc((var(--s) + var(--size) * 0.25) * 0.1vw);
-  height: calc((var(--s) / 2 + var(--size) / 3) * 1vw);
+  width: calc((var(--s) + var(--size) * 0.5) * 0.05vw);
+  height: calc((var(--s) * 5 + var(--size) / 2) * 0.25vw);
   border-radius: calc((var(--s) + var(--size)) * 1px);
-  --pos-x: calc((var(--s) + var(--size)) * 0.15vw);
-  transform: rotate(calc((var(--degrees) / var(--quantity) * 1deg) * (var(--s) + var(--size)))) translate(var(--pos-x), 0px);
+  --pos-x: calc((var(--s)) * 0.25vw);
+  transform: rotate(calc((var(--degrees) / var(--quantity) * 1deg) * (var(--s) + 10))) translate(var(--pos-x), 0px);
   transform-origin: 50% 50%;
   position: absolute;
-  opacity: 0.75;
+  opacity: 0.7;
   background: linear-gradient(#4c0668 0%,#ff4793 30%,  #fff 100%);
-  /* transition: all 0.15s ease; */
   box-shadow: 0 0 15px 0 #4c066833;
 }
