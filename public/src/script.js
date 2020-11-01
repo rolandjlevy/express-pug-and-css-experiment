@@ -13,9 +13,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
     $('.wrapper').innerHTML = 'Loading...';
     const size = $('.size').value;
     const degrees = $('.degrees').value;
-    const url = `/?quantity=${e.target.value}&size=${size}&degrees=${degrees}`;
-    console.log(url)
+    const col = encodeURIComponent($('.colour-picker').value);
+    const url = `/?quantity=${e.target.value}&size=${size}&degrees=${degrees}&col=${col}`;
     document.location = url;
   }, false);
+
+
+  $('.colour-picker').addEventListener('input', (e) => {
+    document.documentElement.style.setProperty('--col', e.target.value);
+  }, false);
+  
 
 });

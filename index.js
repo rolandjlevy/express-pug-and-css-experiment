@@ -10,10 +10,12 @@ app.get('/',  (req, res) => {
   const size = req.query.size || 1;
   const degrees = req.query.degrees || 360;
   const quantities = [25, 50, 75, 100];
-  const quantity = req.query.quantity || 75;
-  res.send(pug.renderFile('public/index.pug', { size, degrees, quantities, quantity })); 
+  const quantity = req.query.quantity || 50;
+  const col = req.query.col || '#4788ff';
+  const params = { size, degrees, quantities, quantity, col: decodeURIComponent(col) }
+  res.send(pug.renderFile('public/index.pug', params)); 
 });
 
 app.listen(8080, () => {
-    console.log('Server up!');
+  console.log('Server up!');
 });
