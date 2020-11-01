@@ -3,6 +3,9 @@ const pug = require('pug');
 const app = express();
 app.use(express.static('public'));
 
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
+
 app.get('/',  (req, res) => {
   const size = req.query.size || 1;
   const degrees = req.query.degrees || 360;

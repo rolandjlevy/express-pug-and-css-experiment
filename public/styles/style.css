@@ -1,6 +1,7 @@
 * {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   color: #fff;
+  font-size: 1rem;
 }
 
 body {
@@ -10,6 +11,8 @@ body {
 
 h1 {
   color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 input, button, select {
@@ -33,6 +36,6 @@ input, button, select {
   transform-origin: 50% 50%;
   position: absolute;
   opacity: 0.7;
-  background: linear-gradient(#432250 0%,#ff4793 30%,  #fff 100%);
+  background: linear-gradient(#511269 0%,#ff4793 30%,  #fff 100%);
   box-shadow: 0 0 15px 0 #4c066833;
 }
