@@ -9,10 +9,9 @@ This started off as an exersize to learn Pug and ended up being a lot of fun cre
 
 ### Features 
 - Built using a minimal amount of code in Express, [Pug](https://pugjs.org), JavaScript and CSS.
-- How does it work? The CSS variable are updated from the sliders using the following JavaScript:
+- How does it work? The CSS variables determine the movement of the lines using the width, height and transform properties in the `.line` class in style.css. JavaScript is used to update the CSS variables. For example, this updates the `--size` variable for each line:
 
 ```js
-// update the size
 $('.size').addEventListener('input', (e) => {
   document.documentElement.style.setProperty('--size', e.target.value);
 }, false);
