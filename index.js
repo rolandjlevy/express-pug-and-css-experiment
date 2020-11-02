@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 const quantities = [25, 50, 75, 100];
-const initialColour = '#4788ff';
+const initialColour = '#ff4793';
 
 app.get('/',  (req, res) => {
   const size = req.query.size || 1;

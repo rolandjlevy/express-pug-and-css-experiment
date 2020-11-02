@@ -1,4 +1,4 @@
-# Swirly thing with Pug + CSS 🌀
+# 🌀 Swirly thing with Pug + CSS 🌀
 
 This started off as an exersize to learn Pug and ended up being a lot of fun creating this interactive swirly thing.
 
