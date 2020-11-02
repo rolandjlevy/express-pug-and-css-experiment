@@ -4,3 +4,10 @@
 - Pug intro: https://www.nodejsera.com/library/pug/pug-introduction.html
 - Pug converter: https://www.ubercompute.com/pug-to-html
 - Pug docs: https://pugjs.org/
+
+### bash file
+- inside `.replit` file 
+```js
+language = "nodejs"
+run = "node index.js"
+```
