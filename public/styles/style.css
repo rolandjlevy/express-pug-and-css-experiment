@@ -33,14 +33,14 @@ span {
 }
 
 .line {
-  width: calc((var(--s) + var(--size) * 0.5) * 0.1vw);
+  width: calc((var(--s) + var(--size) * 0.3) * 0.1vw);
   height: calc((var(--s) * 5 + var(--size) / 2) * 0.25vw);
   border-radius: calc((var(--s) + var(--size)) * 1px);
   --pos-x: calc((var(--s)) * 0.25vw);
   transform: rotate(calc((var(--degrees) / var(--quantity) * 1deg) * (var(--s) + 10))) translate(var(--pos-x), 0px);
   transform-origin: 50% 50%;
   position: absolute;
-  opacity: 0.75;
+  opacity: 0.85;
   background: linear-gradient(#00000099 0%,var(--col) 50%,  #fff 100%);
   box-shadow: 0 0 15px 0 #51415733;
 }
