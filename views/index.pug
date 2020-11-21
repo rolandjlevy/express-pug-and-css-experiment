@@ -1,19 +1,6 @@
-- let s = quantity
-
-doctype(html)
-html(style=`--quantity:${quantity}; --size:${size}; --degrees:${degrees}; --col:${col}`)
-  head
-    title Swirly thing with Pug + CSS
-    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap')
-    style
-      include ../public/styles/slider.css    
-    style
-      include ../public/styles/style.css
-    script
-      include ../public/src/script.js
-
-  body
+include head.pug
+body  
+  main.v-align
     header
       h1 Swirly thing with Pug + CSS
       p
@@ -46,6 +33,14 @@ html(style=`--quantity:${quantity}; --size:${size}; --degrees:${degrees}; --col:
           value=col
           class='colour-picker'
         )
+
     .wrapper
       while s--
         .line(style=`--s:${s}`)
+
+    footer.p-10
+      p.text-center &copy; Roland Levy 2020 
+        a.new-tab-icon(href='https://rolandlevy.co.uk', target='_blank') see more of my projects
+
+  script 
+    include ../public/src/script.js

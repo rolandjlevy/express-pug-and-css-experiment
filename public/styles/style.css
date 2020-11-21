@@ -44,3 +44,59 @@ span {
   background: linear-gradient(#00000099 0%,var(--col) 50%,  #fff 100%);
   box-shadow: 0 0 15px 0 #51415733;
 }
+
+/**************/
+/* Layout *****/
+/**************/
+
+.h-align, .v-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-align {
+  flex-direction: row;
+}
+
+.v-align {
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+/**********/
+/* Footer */
+/**********/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.125rem;
+  color: #eee;
+}
+
+footer a {
+  color: #eee;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.new-tab-icon::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
+}
