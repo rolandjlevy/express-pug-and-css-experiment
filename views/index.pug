@@ -1,38 +1,15 @@
+- let s = quantity
+
 include head.pug
+
 body  
+
   main.v-align
+
     header
       h1 Swirly thing with Pug + CSS
-      p
-        span Quantity 
-        select(class='quantity')
-          each q in quantities
-            option(value=q selected=(quantity==q)) #{q} 
-      p
-        span Size 
-        input(
-          type='range'
-          min='1'
-          max='150'
-          value=size
-          class='size slider'
-        )
-      p
-        span Swirl 
-        input(
-          type='range'
-          min='0'
-          max='1080'
-          value=degrees
-          class='degrees slider'
-        )
-      p 
-        span Colour 
-        input(
-          type='color'
-          value=col
-          class='colour-picker'
-        )
+
+    include controls.pug
 
     .wrapper
       while s--
